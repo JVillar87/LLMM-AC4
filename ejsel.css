@@ -1,0 +1,225 @@
+/* 1. Treu el marge i el padding a tots els elements per defecte */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Aplica al body la tipografia Arial, un tamany de font de 1em y el color #333 */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    color: #333;
+}
+
+/* 3. Aplica a la classe main-header el color de fons #333, el color de text blanc, un padding de 20 px i alineació de text al centre */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 4. Aplica a l'element home el següent fons d'imatge (hero image), color de text blanc i alineat al centre, i padding de 100px amunt i 20px a sota */
+#home {
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGhldXxlbnwwfHx8fDE2Njg4NzIzOTI&ixlib=rb-1.2.1&q=80&w=100') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* 5. Aplica als botons de la classe cta el color de fons #ff6347, text blanco 1.2em, sense vora i amb cursor en forma de punter */
+.cta button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* 6. Aplica als inputs amb placeholder un padding de 10px i una amplada del 100%; la vora ha de ser 1px solid de color #ccc*/
+input::placeholder {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+/* 7. Aplica als inputs de tipus email el color de vora  */
+input [type="email"] {
+    border-color: #007BFF;
+}
+
+/* 8. Aplica als enllaçs que incloguin "https" en el seu href un color #ff6347 i un subratllat */
+a[href*="https"] {
+    color: #ff6347;
+    text-decoration: underline;
+}
+
+/* 9. Aplica als h1 i h2 un marge inferior de 20px */
+h1,
+h2 {
+    margin-bottom: 20px;
+}
+
+/* 10. Aplica als enllaços en color  #007BFF (sense subratllat) quan es passi el ratolí per sobre */
+a:hover {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* 11. Aplica als enllaços en color  #007BFF (sense subratllat) quan estiguin sent clicats */
+a:active {
+    color: #ff6347;
+}
+
+/* 12. Fes que quan els inputs rebin el focus tinguin un outline solid #007BFF de 2px  */
+input:focus {
+    outline: 2px solid #007BFF;
+}
+
+/* 13. Fes que quan els botons estiguin deshabilitats, s'apliquin els següents estils */
+button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* 14. Fes que el primer element de les llistes desordenades estigui marcat en negreta */
+ul li:first-child {
+    font-weight: bold;
+}
+
+/* 15. Fes que el darrer element de les llistes desordenades estigui marcat en cursiva */
+ul li:last-child {
+    font-style: italic;
+}
+
+/* 16. Fes que el tercer element de les llistes desordenades tingui el fons a  #f4f4f4*/
+ul li:nth-child(3) {
+    background-color: #f4f4f4;
+}
+
+/* 17. Fes que els segons paràgrafs de cada grup de germans tingui color  #007BFF*/
+p:nth-child(2) {
+    color: #007BFF;
+}
+
+/* 18. Fes que els primers paràgrafs de cada grup de germans estigui en 1.4 em negreta */
+p:first-of-type {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+/* 19. Fes que tots els elements imparells d'una llista desordenada tingui el fons a #f9f9f9 */
+ul li:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* 20. Inserta una emoticona de flama al començament del contingut dels elements de classe cta */
+.cta::before {
+    content: '🔥 ';
+}
+
+/* 21. Inserta una emoticona de flama al final del contingut dels elements de classe cta */
+.cta::after {
+    content: ' ⚡';
+}
+
+/* 22. Pels paràgrafs de classe primera-letra, fes que la primera lletra sigui 2em i de color #ff6347 */
+.primera-letra::first-letter {
+    font-size: 2em;
+    color: #ff6347;
+}
+
+/* 23. Aplica els següents estils als elements de classe team-member que estiguin a dins d'un element de classe team */
+.team .team-member {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+/* 24. Aplica els següents estils als ul que siguin fills directes d'un nav, que sigui al seu torn fill directe d'un element amb classe main-header */
+.main-header>nav>ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+/* 25. Afegeix marge (0 15px) als li que siguin fills directes d'un ul,que siguin fills directes d'un nav, que sigui al seu torn fill directe d'un element amb classe main-header */
+.main-header>nav>ul>li {
+    margin: 0 15px;
+}
+
+/* 26. Afegeix 30px de marge esquerra als elements de la classe product-item que vinguin just després d'un altre element de la classe product-item */
+.product-item+.product-item {
+    margin-left: 30px;
+}
+
+/* 27. Afegeix 30px de marge esquerra als elements de la classe product-item que vinguin després (no necessàriament a continuació) d'un altre element de la classe product-item */
+.product-item~.product-item {
+    border-top: 2px solid #ddd;
+}
+
+/* 28. Fes que el color dels enllaços sigui #999 quan aquests ja hagin estat visitats */
+a:visited {
+    color: #999;
+}
+
+/* 29. Fes que els botons de clase cta que estiguin deshabilitats canviin el color a #999 quan es passi el cursos per sobre. I el punter del ratolí canvii a not-allowed */
+.cta:disabled:hover {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+/* 30. Fes que quan es passi el ratolí per sobre d'un enllaç que sigui el primer fill li d'una llista ul que estigui a dins d'un nav (que estigui al seu torn a dins de .main-header), s'apliquin aquests estils. */
+.main-header nav ul li:first-child a:hover {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+/* 31. Fes que s'afegeixi després dels h1 a dins de l'element home el següent contingut en color vermell */
+#home h1::after {
+    content: " ¡Visítanos!";
+    color: #ff6347;
+}
+
+/* 32. Aplica els següents estils als product-item imparells que estigui a dins d'un product-grid, que estigui a dins de featured-products*/
+.featured-products>.product-grid>.product-item:nth-child(odd) {
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+/* 33. Fes que el placeholder canvii a blau cursiva quan els inputs que estan al costat d'una label rebin el focus
+(només a dins d'elements de la classe contact-form) */
+.contact-form label+input:focus::placeholder {
+    color: #007BFF;
+    font-style: italic;
+}
+
+/* 34. Prefixa la emoticona 1.2em d'una càmera de fotos abans dels enllaços que incloguin la cadena "instagram" al seu href, sempre que siguin descendents d'un li, i aquest ho sigui d'un element .scial-media  */
+.social-media li a[href*="instagram"]::before {
+    content: "📷 ";
+    font-size: 1.2em;
+}
+
+/* 35. Fes que el footer tingui aquests estils si no inclou un salt de línia (br) Huràs d'investigar les pseudclasses funcionals :not i :has */
+footer:not(:has(br)) {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 36. Fes que els botons que no tinguin la classe cta tinguin una vora discontínua */
+button:not(.cta) {
+    border: 2px dashed black;
+}
+
+/* 37. Fes visibles a la web els divs que estiguin buits *
+*/
+div:empty {
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+}
